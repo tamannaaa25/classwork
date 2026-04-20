@@ -2,17 +2,17 @@ name: My First Workflow
 
 on:
   push:
-  pull_request:
 
 jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello Message
+      - name: Print message
         run: echo "Hello, GitHub Actions!"
 
   say-bye:
+    needs: say-hello
     runs-on: ubuntu-latest
     steps:
       - name: Print Bye Message
-        run: echo "Bye from GitHub Actions!"
+        run: echo "Bye from 2nd Job"
