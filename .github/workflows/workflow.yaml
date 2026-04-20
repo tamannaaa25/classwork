@@ -1,18 +1,34 @@
-name: My First Workflow
+# name: My First Workflow
+
+# on:
+#   push:
+
+# jobs:
+#   say-hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print message
+#         run: echo "Hello, GitHub Actions!"
+
+#   say-bye:
+#     needs: say-hello
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print Bye Message
+#         run: echo "Bye from 2nd Job"
+
+name: Uses Action Example
 
 on:
   push:
 
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
-    steps:
-      - name: Print message
-        run: echo "Hello, GitHub Actions!"
 
-  say-bye:
-    needs: say-hello
-    runs-on: ubuntu-latest
     steps:
-      - name: Print Bye Message
-        run: echo "Bye from 2nd Job"
+      - name: Checkout code
+        uses: actions/checkout@v4   # clones your repo
+
+      - name: List files
+        run: ls
