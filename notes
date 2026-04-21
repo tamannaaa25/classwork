@@ -1,0 +1,18 @@
+//by default jobs run in parallel, but you can specify dependencies between jobs using the `needs` keyword. 
+For example, if you want the `say-bye` job to run only after the `say-hello` job has completed, you can modify 
+the workflow as follows: 
+
+needs-> used to run job in sequence
+
+
+USES action : job start->virtual machine (no git code)
+1) clone the repo 
+2) npm i wont work ---> node -setup
+3) npm i dependency install 
+4) npm run step
+manually
+run: git clone
+run: node download
+
+action : reusable piece of code provided by github
+to perform common task like cloning a repo , setting environment (node,java, python )
